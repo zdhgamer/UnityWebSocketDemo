@@ -1,0 +1,10 @@
+D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csprojResolveAssemblyReference.cache
+D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csproj.CoreCompileInputs.cache
+D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\WebScoketService.exe.config
+D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\WebScoketService.exe
+D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\WebScoketService.pdb
+D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\Fleck.dll
+D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\Microsoft.WebSockets.dll
+D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csproj.CopyComplete
+D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.exe
+D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.pdb
