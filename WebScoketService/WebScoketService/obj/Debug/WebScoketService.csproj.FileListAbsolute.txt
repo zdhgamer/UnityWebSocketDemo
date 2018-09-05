@@ -8,3 +8,15 @@ D:\VSWorkSpace\WebScoketService\WebScoketService\bin\Debug\Microsoft.WebSockets.
 D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csproj.CopyComplete
 D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.exe
 D:\VSWorkSpace\WebScoketService\WebScoketService\obj\Debug\WebScoketService.pdb
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\WebScoketService.exe.config
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\WebScoketService.exe
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\WebScoketService.pdb
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\Fleck.dll
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\Microsoft.WebSockets.dll
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\protobuf-net.dll
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\bin\Debug\protobuf-net.xml
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csprojResolveAssemblyReference.cache
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csproj.CoreCompileInputs.cache
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\obj\Debug\WebScoketService.csproj.CopyComplete
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\obj\Debug\WebScoketService.exe
+D:\UnityProjectLocation\UnityWebSocketDemo\WebScoketService\WebScoketService\obj\Debug\WebScoketService.pdb
