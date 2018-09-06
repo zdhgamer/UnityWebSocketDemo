@@ -74,7 +74,7 @@ namespace MyWebScoketNet
             }
 
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 100; i++)
             {
                 WebSocketMsgDataTest test = new WebSocketMsgDataTest();
                 test.idd = 11111;

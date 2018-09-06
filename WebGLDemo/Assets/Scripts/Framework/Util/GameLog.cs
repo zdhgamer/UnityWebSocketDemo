@@ -5,7 +5,8 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public class GameLog : MonoBehaviour {
+public class GameLog : MonoBehaviour
+{
 
     private static GameLog instance;
 
@@ -17,7 +18,7 @@ public class GameLog : MonoBehaviour {
     /// <summary>
     /// 文件写入地址
     /// </summary>
-    private string url = Application.persistentDataPath+"/"+ AppConst.AppName;
+    private string url = Application.persistentDataPath + "/" + AppConst.AppName;
 
     private string filePath = "";
 
@@ -34,7 +35,8 @@ public class GameLog : MonoBehaviour {
         instance = this;
         filePath = url + "/GameLog.txt";
 
-        if (File.Exists(filePath)) {
+        if (File.Exists(filePath))
+        {
             File.Delete(filePath);
         }
         File.Create(filePath).Dispose();
@@ -58,8 +60,10 @@ public class GameLog : MonoBehaviour {
     }
 
     //当收到系统日志消息时
-    private void OnLogMessageReceived(string condition, string stackTrace, LogType type) {
-        switch (type) {
+    private void OnLogMessageReceived(string condition, string stackTrace, LogType type)
+    {
+        switch (type)
+        {
             case LogType.Error:
             case LogType.Log:
             case LogType.Warning:

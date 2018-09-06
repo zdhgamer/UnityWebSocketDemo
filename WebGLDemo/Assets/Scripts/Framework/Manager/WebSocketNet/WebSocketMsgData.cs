@@ -6,20 +6,22 @@ using System.IO;
 using System;
 using System.IO.Compression;
 
-public class WebSocketMsgData {
+public class WebSocketMsgData
+{
 
     public int msgId;
 
     public byte[] msMsgData;
 
-    public WebSocketMsgData(int msgId, byte[] msgData) {
+    public WebSocketMsgData(int msgId, byte[] msgData)
+    {
         this.msgId = msgId;
         this.msMsgData = new byte[msgData.Length];
         Array.Copy(msgData, msMsgData, msgData.Length);
     }
 
-    public T DeDeserialize<T>() {
-
+    public T DeDeserialize<T>()
+    {
         using (MemoryStream ms = new MemoryStream())
         {
             ms.Write(msMsgData, 0, msMsgData.Length);

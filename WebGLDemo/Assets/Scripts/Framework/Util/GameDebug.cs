@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDebug : MonoBehaviour {
+public class GameDebug : MonoBehaviour
+{
 
     private static GameDebug instance;
 
@@ -24,7 +25,8 @@ public class GameDebug : MonoBehaviour {
     /// log日志
     /// </summary>
     /// <param name="message"></param>
-    public static void Log(object message) {
+    public static void Log(object message)
+    {
 #if SHOWLOG
         Debug.Log(message);
 #endif
@@ -34,7 +36,8 @@ public class GameDebug : MonoBehaviour {
     /// 错误日志
     /// </summary>
     /// <param name="message"></param>
-    public static void LogError(object message) {
+    public static void LogError(object message)
+    {
 #if SHOWLOG
         Debug.LogError(message);
 #endif
@@ -44,7 +47,8 @@ public class GameDebug : MonoBehaviour {
     /// 警告日志
     /// </summary>
     /// <param name="messag"></param>
-    public static void LogWarning(object messag) {
+    public static void LogWarning(object messag)
+    {
 #if SHOWLOG
         Debug.LogWarning(messag);
 #endif
@@ -54,7 +58,8 @@ public class GameDebug : MonoBehaviour {
     /// 异常日志
     /// </summary>
     /// <param name="e"></param>
-    public static void LogException(Exception e) {
+    public static void LogException(Exception e)
+    {
 #if SHOWLOG
         Debug.LogException(e);
 #endif

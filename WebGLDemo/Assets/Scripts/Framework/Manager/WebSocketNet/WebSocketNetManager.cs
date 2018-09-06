@@ -8,7 +8,8 @@ using UnityEngine;
 using System.Text;
 using ProtoBuf;
 
-public class WebSocketNetManager : MonoBehaviour {
+public class WebSocketNetManager : MonoBehaviour
+{
 
     private ClientWebSocket webSocket = new ClientWebSocket();
 
@@ -39,7 +40,8 @@ public class WebSocketNetManager : MonoBehaviour {
             {
                 onCloseConnect = value;
             }
-            else {
+            else
+            {
                 onCloseConnect += value;
             }
         }
@@ -55,8 +57,9 @@ public class WebSocketNetManager : MonoBehaviour {
     /// </summary>
     /// <param name="msgId"></param>
     /// <param name="callBack"></param>
-    public void RegisterCallBack(int msgId, Action<WebSocketMsgData> callBack) {
-        webSocketMsgCenter.RegisterCallBack(msgId,callBack);
+    public void RegisterCallBack(int msgId, Action<WebSocketMsgData> callBack)
+    {
+        webSocketMsgCenter.RegisterCallBack(msgId, callBack);
     }
 
     /// <summary>
@@ -73,22 +76,25 @@ public class WebSocketNetManager : MonoBehaviour {
     /// </summary>
     /// <param name="msgId"></param>
     /// <param name="callBack"></param>
-    public void RemoveCallBack(int msgId, Action<WebSocketMsgData> callBack) {
-        webSocketMsgCenter.RemoveCallBack(msgId,callBack);
+    public void RemoveCallBack(int msgId, Action<WebSocketMsgData> callBack)
+    {
+        webSocketMsgCenter.RemoveCallBack(msgId, callBack);
     }
 
     /// <summary>
     /// 异步连接服务器
     /// </summary>
     /// <param name="callBack"></param>
-    public async void ConnetServerAsync(Action<bool> callBack) {
+    public async void ConnetServerAsync(Action<bool> callBack)
+    {
         await webSocket.ConnectAsync(new System.Uri(AppConst.WebSocketServerUrl), new CancellationToken());
         if (webSocket.State == WebSocketState.Open)
         {
             StartReceiving();
             callBack?.Invoke(true);
         }
-        else {
+        else
+        {
             callBack?.Invoke(false);
         }
     }
@@ -100,14 +106,16 @@ public class WebSocketNetManager : MonoBehaviour {
     /// <param name="callBack"></param>
     public async void SendMessageAsync<T>(int msgId, T msg, Action<WebSocketMsgData> callBack = null)
     {
-        if (callBack!=null) {
+        if (callBack != null)
+        {
             RegisterCallBack(msgId, callBack);
         }
 
         if (webSocket.State == WebSocketState.Open)
         {
-            using (MemoryStream stream = new MemoryStream()) {
-                byte[] mid = System.Text.Encoding.Default.GetBytes(msgId+"");
+            using (MemoryStream stream = new MemoryStream())
+            {
+                byte[] mid = System.Text.Encoding.Default.GetBytes(msgId + "");
                 Serializer.Serialize(stream, msg);
                 byte[] bytes = stream.ToArray();
                 byte[] send = new byte[mid.Length + bytes.Length];
@@ -116,7 +124,8 @@ public class WebSocketNetManager : MonoBehaviour {
                 await webSocket.SendAsync(new ArraySegment<byte>(send), WebSocketMessageType.Binary, true, new CancellationToken());
             }
         }
-        else {
+        else
+        {
             OnCloseConnect?.Invoke();
         }
     }
@@ -129,7 +138,8 @@ public class WebSocketNetManager : MonoBehaviour {
     {
         while (true)
         {
-            if (webSocket==null) {
+            if (webSocket == null)
+            {
                 break;
             }
             var array = new byte[4096];
@@ -137,12 +147,11 @@ public class WebSocketNetManager : MonoBehaviour {
             if (result.MessageType == WebSocketMessageType.Binary)
             {
                 int msgId = int.Parse(Encoding.Default.GetString(array, 0, 4));
-                Debug.Log("收到的消息长度" + result.Count);
                 GameDebug.Log("收到消息id:" + msgId);
                 byte[] tem = new byte[array.Length];
                 Array.Copy(array, tem, array.Length);
                 byte[] receive = new byte[result.Count - 4];
-                Array.Copy(array,4,receive,0, result.Count - 4);
+                Array.Copy(array, 4, receive, 0, result.Count - 4);
                 WebSocketMsgData data = new WebSocketMsgData(msgId, receive);
                 webSocketMsgCenter.DispatchMsg(data.msgId, data);
             }

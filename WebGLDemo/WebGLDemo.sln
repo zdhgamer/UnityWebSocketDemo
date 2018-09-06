@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGLDemo", "Assembly-CSharp.csproj", "{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGLDemo", "Assembly-CSharp-Editor.csproj", "{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
