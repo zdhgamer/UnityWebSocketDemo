@@ -62,18 +62,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Core\Controller.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Core\Model.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Core\View.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\ICommand.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IController.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IFacade.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IMediator.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IModel.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\INotification.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\INotifier.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IObserver.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IProxy.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Interfaces\IView.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Command\MacroCommand.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Command\SimpleCommand.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Facade\Facade.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Mediator\Mediator.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Observer\Notification.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Observer\Notifier.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Observer\Observer.cs" />
+    <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Proxy\Proxy.cs" />
     <Compile Include="Assets\Scripts\Framework\AppConst.cs" />
+    <Compile Include="Assets\Scripts\Framework\Manager\CanvasRoot\CanvasRootManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\HttpNet\HttpNetManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\WebSocketNet\WebSocketMsgCenter.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\WebSocketNet\WebSocketMsgData.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\WebSocketNet\WebSocketNetManager.cs" />
+    <Compile Include="Assets\Scripts\Framework\NetMsgID\NetMsgID.cs" />
+    <Compile Include="Assets\Scripts\Framework\PurMVCEvents\PurMVCEvents.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\CommonUtil.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\GameDebug.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\GameLog.cs" />
-    <Compile Include="Assets\Scripts\Test\AA.cs" />
-    <Compile Include="Assets\Scripts\Test\BB.cs" />
+    <Compile Include="Assets\Scripts\Framework\Util\NotDestoryGo.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\AppMain.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\Command\StartAppCmd.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\Entity\StartAppEntity.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\Facade\StartAppFacade.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\Proxy\StartAppProxy.cs" />
+    <Compile Include="Assets\Scripts\StartAPP\StartMediator\StartAppMediator.cs" />
     <None Include="Assets\smcs.rsp" />
     <None Include="Assets\StreamingAssets\file.txt" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity2018/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -272,12 +313,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Unity2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="LitJson">
       <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Assets/Plugins/DLL/LitJson.dll</HintPath>
     </Reference>
@@ -289,6 +324,12 @@
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>D:/UnityProjectLocation/UnityWebSocketDemo/WebGLDemo/Assets/Plugins/DLL/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
