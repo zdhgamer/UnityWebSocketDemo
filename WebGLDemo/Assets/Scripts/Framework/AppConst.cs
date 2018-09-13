@@ -17,5 +17,10 @@ public class AppConst
     /// </summary>
     public const string ABExtName = ".unity3d";
 
+    /// <summary>
+    /// 游戏管理器
+    /// </summary>
+    public const string GameManagerName = "GameManagers";
+
 
 }

@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Observer\Observer.cs" />
     <Compile Include="Assets\Scripts\3rd\PureMVC\Patterns\Proxy\Proxy.cs" />
     <Compile Include="Assets\Scripts\Framework\AppConst.cs" />
+    <Compile Include="Assets\Scripts\Framework\Manager.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\CanvasRoot\CanvasRootManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\HttpNet\HttpNetManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\WebSocketNet\WebSocketMsgCenter.cs" />

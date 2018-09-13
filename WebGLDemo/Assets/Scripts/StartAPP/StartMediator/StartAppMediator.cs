@@ -20,6 +20,7 @@ public class StartAppMediator : Mediator
     public override IList<string> ListNotificationInterests()
     {
         IList<string> list = new List<string>();
+        list.Add(PurMVCEvents.AppStarted);
         return list;
     }
 
@@ -30,6 +31,11 @@ public class StartAppMediator : Mediator
     public override void HandleNotification(INotification notification)
     {
         base.HandleNotification(notification);
+        switch (notification.Name) {
+            case PurMVCEvents.AppStarted:
+                Debug.Log("App已启动");
+                break;
+        }
     }
 
 }
