@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGLDemo", "Assembly-CSharp.csproj", "{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{B8283FC8-79EE-57DE-7A6C-B93FD32E138C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGLDemo", "Assembly-CSharp-Editor.csproj", "{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9B4AF4F1-F8F0-CEC0-B774-BF405637D829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
